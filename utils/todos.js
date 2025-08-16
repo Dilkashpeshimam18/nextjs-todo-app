@@ -22,7 +22,7 @@ export async function addTodoInFile(todos) {
 }
 export async function addTodos(data) {
   const todos = await getAllTodos();
-  const todo = { id: Date.now().toString(), data, completed:'false' };
+  const todo = { id: Date.now().toString(), content: data, completed: false };
   todos.push(todo);
 
   await addTodoInFile(todos);
