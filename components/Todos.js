@@ -59,7 +59,7 @@ export default function Todos({ initialTodos }) {
               onClick={() => toggleTodo(todo.id, !todo.completed)}
               className={`cursor-pointer ${todo.completed ? "line-through text-gray-500" : ""}`}
             >
-              {todo.text}
+              {todo.content}
             </span>
             <button
               onClick={() => deleteTodo(todo.id)}
