@@ -5,9 +5,9 @@ const todoFilePath = path.join(process.cwd(), 'data', 'todos.json');
 
 async function ensureFileData() {
   try {
-    await fs.access(todoFilePath);
+    await promises.access(todoFilePath);
   } catch {
-    await fs.writeFile(filePath, JSON.stringify([]));
+    await promises.writeFile(filePath, JSON.stringify([]));
   }
 }
 export async function getAllTodos() {
